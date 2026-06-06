@@ -15,7 +15,7 @@ try {
 const insertFakeUsers = async() => {
     const fakeUsers = [];
 
-    for (let i = 0; i < 149; i++) {
+    for (let i = 0; i < 100; i++) {
         const username = faker.internet.userName({
             firstName: faker.person.firstName(),
             lastName: faker.person.lastName(),
@@ -37,7 +37,7 @@ const insertFakeUsers = async() => {
 
     try {
         await User.bulkCreate(fakeUsers);
-        console.log('149 users inserted successfully via Sequelize!');
+        console.log('100 users inserted successfully via Sequelize!');
     } catch (error) {
         console.error('Error inserting users:', error);
     }
